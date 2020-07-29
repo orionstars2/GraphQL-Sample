@@ -1,0 +1,38 @@
+{
+  "name": "graphql-example",
+  "version": "1.6.1",
+  "description": "Intuitive GraphQL Resolver Example - Application example using contextable.js as GraphQL rootValue on steroids.",
+  "main": "./src/index.js",
+  "config": {
+    "env": "development",
+    "httpHost": "127.0.0.1",
+    "httpPort": 3000,
+    "mongoUrl": "mongodb://localhost:27017/test"
+  },
+  "scripts": {
+    "exec": "node --harmony ./scripts/graph-exec",
+    "print": "node --harmony ./scripts/graph-print",
+    "start": "node --harmony ./scripts/graph-start",
+    "test": "node --harmony node_modules/.bin/ava"
+  },
+  "ava": {
+    "files": [
+      "./tests/*.js",
+      "./tests/**/*.js"
+    ],
+    "concurrency": 1,
+    "failFast": true
+  },
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-graphql": "^0.6.1",
+    "graphql": "^0.8.2",
+    "mongodb": "^2.2.11",
+    "rawmodel": "^1.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0"
+  }
+}
